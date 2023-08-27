@@ -80,7 +80,7 @@ def gui_process_menu(update, context):
         query.answer("Yetkisiz erişim!")
         
 
-def kgag_log_actions(update, context):
+def (update, context):
     query = update.callback_query
     user_id = update.effective_user.id
 
@@ -94,7 +94,7 @@ def kgag_log_actions(update, context):
             
         ]
         reply_markup = InlineKeyboardMarkup(button_list)
-        user_menu[update.effective_chat.id] = 'kgag_log_actions'  
+        user_menu[update.effective_chat.id] = ''  
         update.callback_query.edit_message_text(text="Logs Menu", reply_markup=reply_markup)
     else:
         query.answer("Yetkisiz erişim!")
@@ -140,69 +140,69 @@ def button_click(update, context):
             start(update, context)
         elif query.data == 'pcp_process_menu':
             pcp_process_menu(update, context)
-        elif query.data == 'gui_process_menu':#Gui button menü
+        elif query.data == 'gui_process_menu':
             gui_process_menu(update, context)
-        elif query.data == 'guidockerps': #Gui Docker PS
+        elif query.data == 'guidockerps': 
             func.guidockerps(update, context)
         elif query.data == 'gui_docker_start':
-            func.gui_docker_process(update, context)#GUi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'gui_docker_stop':
-            func.gui_docker_process(update, context)#GUi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'gui_docker_restart':
-            func.gui_docker_process(update, context)#GUi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'mmh_docker_start':
-            func.gui_docker_process(update, context)#Mmh Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'mmh_docker_stop':
-            func.gui_docker_process(update, context)#Mmh Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'mmh_docker_restart':
-            func.gui_docker_process(update, context)#Mmh Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'dü_docker_start':
-            func.gui_docker_process(update, context)#Dü Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'dü_docker_stop':
-            func.gui_docker_process(update, context)#Dü Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'dü_docker_restart':
-            func.gui_docker_process(update, context)#Dü Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'cs_docker_start':
-            func.gui_docker_process(update, context)#Configserver Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'cs_docker_stop':
-            func.gui_docker_process(update, context)#Configserver Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'cs_docker_restart':
-            func.gui_docker_process(update, context)#Configserver Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'roudi_docker_start':
-            func.gui_docker_process(update, context)#Roudi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'roudi_docker_stop':
-            func.gui_docker_process(update, context)#Roudi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'roudi_docker_restart':
-            func.gui_docker_process(update, context)#Roudi Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'postgre_docker_start':
-            func.gui_docker_process(update, context)#postgre Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'postgre_docker_stop':
-            func.gui_docker_process(update, context)#Postgre Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'postgre_docker_restart':
-            func.gui_docker_process(update, context)#Postgre Docker Controller
+            func.gui_docker_process(update, context)
         elif query.data == 'gui_all_packages_stop':
-            func.gui_docker_process(update, context)#Gui All Container Restart
+            func.gui_docker_process(update, context)
         elif query.data == 'gui_all_packages_restart':
             func.scrpt_logs(update,context)
-            func.gui_docker_process(update, context)#Gui All Container Restart        
+            func.gui_docker_process(update, context)      
         elif query.data == 'gui_all_packages_postgre':
-            func.gui_docker_process(update, context)#Gui All Container Postgre hatası düzelince kaldırılacak.                                 
-        elif query.data == 'kgag_log_actions': # logs menü
-            kgag_log_actions(update, context)
+            func.gui_docker_process(update, context                               
+        elif query.data == '': #
+            (update, context)
         elif query.data == 'gui_24h_logs': # logs menü
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'gui_tail_f': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'mmh_24h_logs': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'mmh_tail_f': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'du_24h_logs': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'du_tail_f': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         elif query.data == 'journal_24h_logs': # logs menü -f
-            func.kgag_logs(update, context)
+            func.(update, context)
         # elif query.data == 'temp_control':
         #     temp_control(update, context)
         elif query.data == 'temp_control':
@@ -211,21 +211,21 @@ def button_click(update, context):
             func.weather(update, context)
         elif query.data == 'go_back_gui_menu':
             gui_process_menu(update, context)
-        elif query.data == 'connection_test':  #connection test 
+        elif query.data == 'connection_test':  # test 
             func.connection_test(update, context)
-        elif query.data == 'visible_containers_stop':# Visible Process
+        elif query.data == 'visible_containers_stop':#  Process
             func.visible_containers_stop(update, context)  
-        elif query.data == 'visible_containers_start':# Visible Process
+        elif query.data == 'visible_containers_start':#  Process
             func.visible_containers_start(update, context)
-        elif query.data == 'visible_containers_restart':# Visible Process
+        elif query.data == 'visible_containers_restart':#  Process
             func.visible_containers_restart(update, context)
-        elif query.data == 'pcpdockerps':# Pcp Docker ps
+        elif query.data == 'pcpdockerps':#   ps
             func.pcpdockerps(update, context)
-        elif query.data == 'termal_containers_start': # Termal Process
+        elif query.data == 'termal_containers_start': #  Process
             func.termal_containers_start(update, context)  
-        elif query.data == 'termal_containers_stop':# Termal Process
+        elif query.data == 'termal_containers_stop':#  Process
             func.termal_containers_stop(update, context)
-        elif query.data == 'termal_containers_restart':# Termal Process
+        elif query.data == 'termal_containers_restart':#  Process
             func.termal_containers_restart(update, context)    
         elif query.data == 'gui_other_action':
             gui_other_action(update, context)
@@ -265,7 +265,7 @@ def main():
     dispatcher.add_handler(CommandHandler('termal5f', func.logs_monitor))
     dispatcher.add_handler(CommandHandler('termal6f', func.logs_monitor))
     dispatcher.add_handler(CommandHandler('dockerstats', func.docker_stats))
-    dispatcher.add_handler(CommandHandler('htop', func.kgag_htop))
+    dispatcher.add_handler(CommandHandler('htop', func.))
 
     updater.start_polling()
 
