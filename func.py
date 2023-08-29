@@ -1,5 +1,4 @@
 import paramiko
-test
 import time
 import datetime
 import socket
